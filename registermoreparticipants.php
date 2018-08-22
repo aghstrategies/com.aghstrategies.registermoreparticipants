@@ -4,6 +4,21 @@ require_once 'registermoreparticipants.civix.php';
 use CRM_Registermoreparticipants_ExtensionUtil as E;
 
 /**
+ * Implements hook_civicrm_buildForm().
+ *
+ * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_buildForm
+ */
+function registermoreparticipants_civicrm_buildForm($formName, &$form) {
+  // on events online conribution settings page
+  if ($formName == 'CRM_Event_Form_ManageEvent_Registration') {
+    $additionalParticipants =& $form->getElement('max_additional_participants');
+    for ($i = 9; $i < 30; $i++) {
+      $additionalParticipants->addOption($i + 1, $i + 1);
+    }
+  }
+}
+
+/**
  * Implements hook_civicrm_config().
  *
  * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_config

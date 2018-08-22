@@ -1,9 +1,8 @@
 # com.aghstrategies.registermoreparticipants
 
-![Screenshot](/images/screenshot.png)
+![Screenshot](/images/maxPart.png)
 
-(*FIXME: In one or two paragraphs, describe what the extension does and why one would download it. *)
-
+This extension ups the number of "Maximum additional participants" for CiviCRM Events from 9 to 30.
 The extension is licensed under [AGPL-3.0](LICENSE.txt).
 
 ## Requirements
@@ -42,3 +41,7 @@ cv en registermoreparticipants
 ## Known Issues
 
 (* FIXME *)
+
+## Future Goals
+
+Make the Max number of additional participants a setting
